@@ -3,6 +3,8 @@ This is my attempt at synchronizing my dotfiles across several machines. If you 
 
 
 ### Todo
+- reinstall ubuntu
+- figure out i3 desktop files
 
 ### Learn
 - python
@@ -13,5 +15,5 @@ This is my attempt at synchronizing my dotfiles across several machines. If you 
 - vim-r
 
 #### Fix
-- ocassional gtk error popup
+- ocassional gtk error popup (seems to have stopped)
 - i3 workspace breaking on Nautilus startup
