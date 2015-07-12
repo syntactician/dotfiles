@@ -4,10 +4,14 @@ This is my attempt at synchronizing my dotfiles across several machines. If you 
 
 ### Todo
 
-#### Sync configs
-- write .gitignore for ~
-- replace dotfiles repo
+### Learn
+- python
+- R
 
 #### Implement
+- vim Latex Live Preview
+- vim-r
 
 #### Fix
+- ocassional gtk error popup
+- i3 workspace breaking on Nautilus startup
