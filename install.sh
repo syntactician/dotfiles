@@ -1,3 +1,4 @@
+#! /bin/bash
 sudo apt-add-repository -y ppa:lvillani/i3
 sudo apt-add-repository ppa:snwh/pulp
 sudo apt-add-repository ppa:numix/ppa
@@ -31,9 +32,15 @@ ln ~/.dotfiles/dunstrc ~/.config/dunst/dunstrc
 ln ~/.dotfiles/Xresources ~/.Xresources
 ln ~/.dotfiles/README.md ~/todo.md 
 ln ~/.dotfiles/MyAntigen.hs ~/.zsh/MyAntigen.hs
-ln -s ~/.builds/pure/async.zsh ~/.zfunctions/async
-ln -s ~/.builds/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
+sudo ln -s ~/.builds/pure/async.zsh /usr/share/zsh/site-functions/async
+sudo ln -s ~/.builds/pure/pure.zsh /usr/share/zsh/site-functions/prompt_pure_setup
+cd
 chmod +x ~/.dotfiles/ashes.sh
 ./.dotfiles/ashes.sh
 sudo apt-get autoremove
 chsh -s $(which zsh)
+
+cd
+chmod +x ~/.dotfiles/configurate.zsh
+zsh
+./configurate.zsh

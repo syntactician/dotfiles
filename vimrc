@@ -20,8 +20,11 @@ let g:livepreview_previewer = 'zathura'
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 
+hi StatusLine ctermbg=white ctermfg=black
+
 set laststatus=2
 set is
+set nu
 set rnu
 
 function! NumberToggle()

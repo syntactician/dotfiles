@@ -24,6 +24,7 @@ bindkey "\e\e" sudo-command-line
 
 # environmentals
 export EDITOR='vim'
+export TERM='xterm'
 
 # universal aliases
 alias v='vim'

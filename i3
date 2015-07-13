@@ -39,8 +39,8 @@ client.urgent           #C79595 #C79595 #ee0000 #383a3b
 # smart_borders on
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec gnome-terminal
+bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Shift+Return exec urxvt
 
 # start other apps directly
 bindsym $mod+Shift+f exec firefox
@@ -228,7 +228,3 @@ exec xcompmgr
 # misc startup stuff
 exec unclutter -grab &
 exec pkill nautilus
-
-#test stuff
-exec pkill dunst
-exec notify-osd
