@@ -3,17 +3,13 @@ This is my attempt at synchronizing my dotfiles across several machines. If you 
 
 
 ### Todo
-- reinstall ubuntu
-- figure out i3 desktop files
+- reinstall ubuntu (again)
+	- test the new install script
 
 ### Learn
-- python
-- R
 
 #### Implement
 - vim Latex Live Preview
 - vim-r
 
 #### Fix
-- ocassional gtk error popup (seems to have stopped)
-- i3 workspace breaking on Nautilus startup
