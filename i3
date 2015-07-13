@@ -228,3 +228,7 @@ exec xcompmgr
 # misc startup stuff
 exec unclutter -grab &
 exec pkill nautilus
+
+#test stuff
+exec pkill dunst
+exec notify-osd
