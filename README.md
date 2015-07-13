@@ -6,7 +6,7 @@ This is my attempt at synchronizing my dotfiles across several machines. If you 
 - reinstall ubuntu (again)
 	- test the new install script
 
-### Learn
+#### Learn
 
 #### Implement
 - vim Latex Live Preview
