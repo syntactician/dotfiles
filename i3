@@ -7,7 +7,7 @@ set $mod Mod4
 # is used in the bar {} block below. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
-font pango: Ubuntu Mono 18px
+font pango: Liberation Mono 18px
 
 # set workspaces
 set $WS1 work
@@ -33,10 +33,6 @@ client.focused          #565E65 #565E65 #565E65 #565E65
 client.unfocused        #1C2023 #1C2023 #ebdbb2 #323232
 client.focused_inactive #1C2023 #1C2023 #ebdbb2 #323232
 client.urgent           #C79595 #C79595 #ee0000 #383a3b
-# hide_edge_borders both
-# new_float pixel 0
-# new_window pixel 0
-# smart_borders on
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
@@ -203,6 +199,7 @@ tray_output none
 position bottom
 workspace_buttons yes
 font pango: Liberation Sans 22px
+status_command ~/.i3/conky.sh 
 colors  {
         background #1C2023
 	statusline #C7CCD1
