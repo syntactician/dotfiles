@@ -121,26 +121,26 @@ bindsym $mod+Shift+e exec pkill -u $USER
 
 # resize focused window
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+	bindsym h resize shrink width 10 px or 10 ppt
+		bindsym j resize grow height 10 px or 10 ppt
+		bindsym k resize shrink height 10 px or 10 ppt
+		bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+		bindsym Left resize shrink width 10 px or 10 ppt
+		bindsym Down resize grow height 10 px or 10 ppt
+		bindsym Up resize shrink height 10 px or 10 ppt
+		bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# back to normal: Enter or Escape
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -151,41 +151,41 @@ gaps outer 0
 
 # gaps mode
 
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+	set $mode_gaps Gaps: (o) outer, (i) inner
+	set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+	bindsym $mod+Shift+g mode "$mode_gaps"
 
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-	bindsym i      mode "$mode_gaps_inner"
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
+	mode "$mode_gaps" {
+		bindsym o      mode "$mode_gaps_outer"
+			bindsym i      mode "$mode_gaps_inner"
+			bindsym Return mode "default"
+			bindsym Escape mode "default"
+	}
 
 mode "$mode_gaps_inner" {
 	bindsym plus  gaps inner current plus 5
-	bindsym minus gaps inner current minus 5
-	bindsym 0     gaps inner current set 0
+		bindsym minus gaps inner current minus 5
+		bindsym 0     gaps inner current set 0
 
-	bindsym Shift+plus  gaps inner all plus 5
-	bindsym Shift+minus gaps inner all minus 5
-	bindsym Shift+0     gaps inner all set 0
+		bindsym Shift+plus  gaps inner all plus 5
+		bindsym Shift+minus gaps inner all minus 5
+		bindsym Shift+0     gaps inner all set 0
 
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
 	bindsym plus  gaps outer current plus 5
-	bindsym minus gaps outer current minus 5
-	bindsym 0     gaps outer current set 0
+		bindsym minus gaps outer current minus 5
+		bindsym 0     gaps outer current set 0
 
-	bindsym Shift+plus  gaps outer all plus 5
-	bindsym Shift+minus gaps outer all minus 5
-	bindsym Shift+0     gaps outer all set 0
+		bindsym Shift+plus  gaps outer all plus 5
+		bindsym Shift+minus gaps outer all minus 5
+		bindsym Shift+0     gaps outer all set 0
 
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 
 
@@ -194,21 +194,21 @@ mode "$mode_gaps_outer" {
 # finds out, if available)
 
 bar {
-mode dock
-tray_output none
-position bottom
-workspace_buttons yes
-font pango: Liberation Sans 22px
-status_command ~/.i3/conky.sh 
-colors  {
-        background #1C2023
-	statusline #C7CCD1
-			#BORDER #BACKGROUND #TEXT
-        focused_workspace #292929  #F3F4F5 #1C2023
-	inactive_workspace #252525 #1C2023 #F3F4F5
+	mode dock
+		tray_output none
+		position bottom
+		workspace_buttons yes
+		font pango: Liberation Sans 22px
+		status_command ~/.i3/conky.sh 
+		colors  {
+			background #1C2023
+				statusline #C7CCD1
+#BORDER #BACKGROUND #TEXT
+				focused_workspace #292929  #F3F4F5 #1C2023
+				inactive_workspace #252525 #1C2023 #F3F4F5
 
-        urgent_workspace #b492b6 #C79595 #1C2023
-	} 
+				urgent_workspace #b492b6 #C79595 #1C2023
+		} 
 }
 
 # floating classes for_window 

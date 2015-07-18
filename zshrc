@@ -34,6 +34,7 @@ alias i3rc="vim ~/.i3/config"
 alias muttrc="vim ~/.muttrc"
 
 # ubuntu aliases
+alias nautilus='nautilus --no-desktop'
 alias sublime='/opt/sublime_text/sublime_text'
 alias open='xdg-open &>/dev/null'
 alias o='xdg-open &>/dev/null'
@@ -49,6 +50,7 @@ alias agu='sudo apt-get update'   # ad
 alias agud='sudo apt-get update && sudo apt-get dist-upgrade' #adu
 alias agug='sudo apt-get upgrade' # ag
 alias aguu='sudo apt-get update && sudo apt-get upgrade'      #adg
+alias age='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 
 compdef _ag ag='sudo apt-get'
 compdef _aga aga='sudo apt-get autoclean'
@@ -62,3 +64,4 @@ compdef _agu agu='sudo apt-get update'
 compdef _agud agud='sudo apt-get update && sudo apt-get dist-upgrade'
 compdef _agug agug='sudo apt-get upgrade'
 compdef _aguu aguu='sudo apt-get update && sudo apt-get upgrade'
+compdef _age age='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
