@@ -34,10 +34,10 @@ alias i3rc="vim ~/.i3/config"
 alias muttrc="vim ~/.muttrc"
 
 # ubuntu aliases
-alias nautilus='nautilus --no-desktop'
+alias nautilus='nautilus --no-desktop &'
 alias sublime='/opt/sublime_text/sublime_text'
-alias open='xdg-open &>/dev/null'
-alias o='xdg-open &>/dev/null'
+alias open='xdg-open &>/dev/null &'
+alias o='xdg-open &>/dev/null &'
 alias ag='sudo apt-get'            # age - but without sudo
 alias aga='sudo apt-get autoclean' # aac
 alias agb='sudo apt-get build-dep' # abd
