@@ -37,4 +37,3 @@ sudo apt-get autoremove
 chsh -s $(which zsh)
 cd
 zsh configure.zsh
-zsh
