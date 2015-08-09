@@ -38,8 +38,6 @@ cd
 ./.dotfiles/ashes.sh
 sudo apt-get autoremove
 chsh -s $(which zsh)
-
 cd
-chmod +x ~/.dotfiles/configurate.zsh
+zsh configure.zsh
 zsh
-./configurate.zsh
