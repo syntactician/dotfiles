@@ -10,11 +10,13 @@ This is (among other things) my attempt at synchronizing my dotfiles across seve
 
 #### Learn
 - R
+- SuperLab
 - gtk
-- how to "fork" a ppa?
+	- how to "fork" a ppa?
 
 #### Implement
 - vim Latex Live Preview
 - vim-r
+- custom GTK theme
 
 #### Fix
