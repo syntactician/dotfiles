@@ -146,7 +146,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #gaps
-gaps inner 45
+gaps inner 25
 gaps outer 0
 
 # gaps mode
