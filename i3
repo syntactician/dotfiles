@@ -192,24 +192,24 @@ mode "$mode_gaps_outer" {
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-
-bar {
-	mode dock
-		tray_output none
-		position bottom
-		workspace_buttons yes
-		font pango: Liberation Sans 22px
-		status_command ~/.i3/conky.sh 
-		colors  {
-			background #1C2023
-				statusline #C7CCD1
+# commented out because I'm using xfce4-panel now
+#bar {
+#	mode dock
+#		tray_output none
+#		position bottom
+#		workspace_buttons yes
+#		font pango: Liberation Sans 22px
+#		status_command ~/.i3/conky.sh 
+#		colors  {
+#			background #1C2023
+#				statusline #C7CCD1
 #BORDER #BACKGROUND #TEXT
-				focused_workspace #292929  #F3F4F5 #1C2023
-				inactive_workspace #252525 #1C2023 #F3F4F5
-
-				urgent_workspace #b492b6 #C79595 #1C2023
-		} 
-}
+#				focused_workspace #292929  #F3F4F5 #1C2023
+#				inactive_workspace #252525 #1C2023 #F3F4F5
+#
+#				urgent_workspace #b492b6 #C79595 #1C2023
+#		} 
+#}
 
 # floating classes for_window 
 for_window [class="Plover"] floating enable 
