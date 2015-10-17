@@ -1,4 +1,6 @@
 " Edward Hernández
+" Vundle {{{
+
 set nocompatible
 filetype off
 
@@ -10,41 +12,67 @@ Plugin 'tpope/vim-sensible'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'sjl/gundo.vim'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'tpope/vim-commentary'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 
 call vundle#end()
+
+"}}}
+
+set tabstop=4
+set softtabstop=4
+
 filetype plugin indent on
-syntax on
 syntax enable
 
-let g:livepreview_previewer = 'zathura'
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_math=1
-
-hi StatusLine ctermbg=white ctermfg=black
-
+set showmatch
+set cursorline
+" hi StatusLine ctermbg=white ctermfg=black
 set laststatus=2
+set autoread
+set ruler
+
 set is
 set nu
 set rnu
+set showcmd
 
 function! NumberToggle()
 	set nu! rnu!
 endfunc
 
-let mapleader			= ","
+function! s:goyo_enter()
+	Limelight
+	set nonumber norelativenumber cursorline!
+endfunc
 
-map <Leader>n :call NumberToggle()<cr>
-map <Leader>nu :set nu!<cr>
-map <Leader>rn :set rnu!<cr>
-map <Leader>s :w<cr>
-map <Leader>S :wq<cr>
-map <Leader>v :source $MYVIMRC<cr>
-map <Leader>st :set
-map <Leader>c :q<cr>
-map <Leader>C :wq<cr>
-map <Leader>r :s/
-map <Leader>gr :%s/
-map <Leader>e :normal i Edward Hernández<ESC>
-map <Leader>ws :%s/\s\+$//<cr>
-map <Leader>sc :setlocal spell! spelllang=en_us<cr>
-map <Leader>p :LLPStartPreview <cr>
+
+let mapleader			= " "
+
+map <leader>n :call NumberToggle()<cr>
+map <leader>nu :set nu!<cr>
+map <leader>rn :set rnu!<cr>
+map <leader>s :w<cr>
+map <leader>S :wq<cr>
+map <leader>v :source $MYVIMRC<cr>
+map <leader>st :set
+map <leader>c :q<cr>
+map <leader>C :wq<cr>
+map <leader>r :s/
+map <leader>gr :%s/
+map <leader>e :normal i Edward Hernández<ESC>
+map <leader>ws :%s/\s\+$//<cr>
+map <leader>sc :setlocal spell! spelllang=en_us<cr>
+map <leader>p :LLPStartPreview <cr>
+map <leader>u :GundoToggle<CR>
+map <leader>g :Goyo<CR>:Limelight!!<CR>:set number! relativenumber! cursorline!<CR>
+map <leader>l :Limelight!!<CR>
+let g:livepreview_previewer = 'zathura'
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_math=1
+
+" vim:foldmethod=marker:foldlevel=0
