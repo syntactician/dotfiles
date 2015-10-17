@@ -1,7 +1,7 @@
 # vim:filetype=i3
 
 # set mod to Win key
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -28,7 +28,7 @@ bindsym $mod+Shift+s move scratchpad
 bindsym $mod+s scratchpad show
 
 # borders
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel
 client.focused          #565E65 #565E65 #565E65 #565E65
 client.unfocused        #1C2023 #1C2023 #ebdbb2 #323232
 client.focused_inactive #1C2023 #1C2023 #ebdbb2 #323232
@@ -146,8 +146,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #gaps
-gaps inner 25
-gaps outer 0
+# gaps inner 25
+# gaps outer 0
 
 # gaps mode
 
@@ -217,7 +217,7 @@ for_window [class="File-roller"] floating enable
 for_window [class="Pcmanfm"] floating enable
 
 #Wallpaper
-exec nitrogen --set-scaled Pictures/wallpaper.png
+exec nitrogen --set-scaled ~/Pictures/wallpaper.png
 # fix urxvt
 exec xrdb ~/.Xresources
 exec xcompmgr
