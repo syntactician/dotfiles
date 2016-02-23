@@ -1,5 +1,5 @@
 [global]
-    font = Sans 18
+    font = Sans 12
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -149,18 +149,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#1C2023"
-    foreground = "#C7CCD1"
+    background = "#2B303B"
+    foreground = "#A7ABDA"
     timeout = 10
 
 [urgency_normal]
-    background = "#747C84"
-    foreground = "#1C2023"
+    background = "#A7ABDA"
+    foreground = "#2B303B"
     timeout = 10
 
 [urgency_critical]
-    background = "#C79595"
-    foreground = "#1C2023"
+    background = "#BF616A"
+    foreground = "#2B303B"
     timeout = 0
 
 
