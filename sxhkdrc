@@ -7,17 +7,17 @@ super + Return
 super + !button1
 	wmv -a %i %i $(pfw)
 
-super + {h, j, k, l, c}
-	~/.wm/snap.sh {west, south, north, east}
+super + {h, j, k, l}
+	~/.wm/snap.sh {west, south, north, east} $(pfw)
+
+super + f
+	~/.wm/snap.sh full $(pfw)
 
 super + shift + {h, l, c}
-	~/.wm/snap.sh {northwest, northeast, center}
+	~/.wm/snap.sh {northwest, northeast, center} $(pfw)
 
 super + alt + {h, l}
 	~/.wm/snap.sh {southwest, southeast}
-
-super + f
-	~/.wm/full.sh
 
 super + {Tab, grave}
 	~/.wm/focus.sh {next, prev}
