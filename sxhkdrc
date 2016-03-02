@@ -13,17 +13,20 @@ super + {h, j, k, l}
 super + f
 	~/.wm/snap.sh full $(pfw)
 
-super + shift + {h, l, c}
-	~/.wm/snap.sh {northwest, northeast, center} $(pfw)
+super + shift + c
+	~/.wm/snap.sh center $(pfw)
+
+super + shift + {h, l}
+	~/.wm/snap.sh {northwest, northeast} $(pfw)
 
 super + alt + {h, l}
-	~/.wm/snap.sh {southwest, southeast}
+	~/.wm/snap.sh {southwest, southeast} $(pfw)
 
 super + {Tab, grave}
 	~/.wm/focus.sh {next, prev}
 
 super + space
-	dmenu_run -nb '#2b303b' -sb '#2b303b' -nf '#a7adba' -sf '#bf616a'
+	dmenu_run
 
 super + shift + e
 	pkill xinit
