@@ -38,21 +38,49 @@
 # chsh -s $(which zsh)
 # cd
 
+# right off the top, let's get some fucking locales
+sed -e '/en_US.UTF-8/s/#//' -i /etc/locale-gen
+locale-gen
+
 # an Arch-specific install script for the stuff I feel like I need
 pacman -S git
 
-git clone https://github.com/syntactician/pkgbuild.git   ~/.pkgbuild
+# this may be redundant
 git clone https://github.com/syntactician/dotfiles.git   ~/.dotfiles
+git clone https://github.com/syntactician/pkgbuild.git   ~/.pkgbuild
+
 git clone https://github.com/syntactician/coursework.git ~/courses
 git clone https://github.com/syntactician/honors.git     ~/honors
 
+# install pacaur to handle AUR installations
 mkdir ~/.build
 git clone https://aur.archlinux.org/cower-git.git  ~/.build/cower-git  && cd ~/.build/cower-git  && makepkg -sri
 git clone https://aur.archlinux.org/pacaur-git.git ~/.build/pacaur-git && cd ~/.build/pacaur-git && makepkg -sri
 
-for pkgbuild in ~/.pkgbuild/*-git; do
-	mkdir ~/.build/$(basename $pkgbuild)
-	ln $pkgbuild ~/.build/$(basename $pkgbuild)/PKGBUILD
+# install all my PKGBUILDs programmatically
+for PKGBUILD in ~/.pkgbuild/*-git; do
+	mkdir ~/.build/$(basename $PKGBUILD)
+	ln $PKGBUILD ~/.build/$(basename $PKGBUILD)/PKGBUILD
+	cd ~/.build/$(basename $PKGBUILD)/ && makepkg -sri
 done
 
-pacaur -S 
+# enable testing repos
+sed -e '/#[testing]/s/#//'                                                 \
+	-e '/[testing]/{n;s/.*/Include = /etc/pacman.d/mirrorlist/}'           \
+	-e '/#[community-testing/s/#//'                                        \
+	-e '/[community-testing/{n;s/.*/Include = /etc/pacman.d/mirrorlist/}'  \
+	-i /etc/pacman.conf
+
+pacman -S xorg-server xorg-xinit virtualbox-guest-utils texlive-most pandoc
+pacaur -S neovim-git dunst-git firefox-nightly
+
+# now some config
+mkdir ~/.config ~/.config/nvim ~/.config/dunst
+
+# let's get a functional editor
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln ~/.dotfiles/init.vim ~/.config/nvim/init.vim
+# i'll have to exit this manually. blah.
+nvim -c "PlugInstall"
+
