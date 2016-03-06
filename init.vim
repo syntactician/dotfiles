@@ -1,27 +1,23 @@
 " Edward Hernández
-" Vundle {{{
+" vim-plug {{{
 
 set nocompatible
 filetype off
 
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" 
-" Plugin 'gmarik/Vundle.vim'
-" Plugin 'tpope/vim-sensible'
+call plug#begin('~/.config/nvim/plugged/')
+
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 " Plugin 'godlygeek/tabular'
-" Plugin 'plasticboy/vim-markdown'
-" Plugin 'PotatoesMaster/i3-vim-syntax'
+Plug 'plasticboy/vim-markdown'
 " Plugin 'sjl/gundo.vim'
 " Plugin 'vim-pandoc/vim-pandoc'
 " Plugin 'vim-pandoc/vim-pandoc-syntax'
-" Plugin 'tpope/vim-commentary'
-" Plugin 'junegunn/goyo.vim'
-" Plugin 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-easy-align'
 " Plugin 'reedes/vim-pencil'
-
-" call vundle#end()
-
+call plug#end()
 "}}}
 
 set tabstop=4
@@ -89,6 +85,10 @@ map <leader>u :GundoToggle<CR>
 map <leader>v :source $MYVIMRC<cr>
 map <leader>V :sp ~/.vimrc<cr>
 map <leader>ws :%s/\s\+$//<cr>
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 let g:livepreview_previewer = 'zathura'
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1

@@ -1,6 +1,5 @@
-# pure
-autoload -U promptinit && promptinit
-prompt off
+# autoload -U promptinit && promptinit
+# prompt off
 PROMPT='] '
 RPROMPT="%~"
 
@@ -21,6 +20,9 @@ zle -N sudo-command-line
 	# Defined shortcut keys: [Esc] [Esc]
 bindkey "\e\e" sudo-command-line
 
+#
+bindkey -v
+
 # environmentals
 export EDITOR='vim'
 export TERM='xterm'
@@ -28,3 +30,5 @@ export TERM='xterm'
 # universal aliases
 alias v='nvim'
 alias vim='nvim'
+alias mutt='mutt -F ~/.config/mutt/muttrc'
+alias t='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
