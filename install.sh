@@ -1,52 +1,25 @@
 #!/bin/sh
-# this assumes that this repo is cloned to ~/.dotfiles and is only tested on Ubuntu 14.04 - 15.10
-# apt-get update && sudo apt-get upgrade
-# apt-get install vim i3 zsh vlc libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev dconf-editor gconf-editor gnome-tweak-tool gnome-terminal rxvt-unicode pcmanfm ghc cabal-install
-# cabal update
-# cabal install shelly
-# cd ~
-# mkdir /usr/share/zsh/site-functions ~/.builds ~/.vim ~/.vim/bundle ~/.zsh ~/.i3 ~/.config/zathura ~/.config/dunst ~/.config/xfce4 ~/.config/xfce4/xfconf ~/.config/xfce4/xfconf/xfce-perchannel-xml
-# cd
-# git clone https://github.com/Airblader/i3 ~/.builds/i3-gaps
-# git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
-# git clone https://github.com/Tarrasch/antigen-hs.git ~/.zsh/antigen-hs/
-# git clone https://github.com/sindresorhus/pure.git ~/.builds/pure
-# git clone https://github.com/NitruxSA/flattr-icons ~/.builds/flattr-icons
-# git clone https://github.com/syntactician/dotfiles.git ~/.dotfiles
-# git config --global user.email "edward.hernandez@gmx.com"
-# git config --global user.name "Edward Hernandez"
-# cd ~/.builds/i3-gaps
-# make && sudo make install
-# cd ~
-# cp -r ~/.builds/flattr-icons/Flattr /usr/share/icons/
-# # cp ~/.dotfiles/muttrc ~/.muttrc
-# ln -f ~/.dotfiles/xfce/* ~/.config/xfce4/xconf/xfce-perchannel-xml/
-# ln ~/.dotfiles/i3 ~/.i3/config
-# ln ~/.dotfiles/zshrc ~/.zshrc
-# ln ~/.dotfiles/vimrc ~/.vimrc
-# ln ~/.dotfiles/wallpaper.png ~/Pictures/
-# ln ~/.dotfiles/zathurarc ~/.config/zathura/zathurarc
-# ln ~/.dotfiles/dunstrc ~/.config/dunst/dunstrc
-# ln ~/.dotfiles/Xresources ~/.Xresources
-# ln ~/.dotfiles/README.md ~/todo.md 
-# ln ~/.dotfiles/MyAntigen.hs ~/.zsh/MyAntigen.hs
-# ln -s ~/.builds/pure/async.zsh /usr/local/share/zsh/site-functions/async
-# ln -s ~/.builds/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
-# cd
-# ./.dotfiles/ashes.sh
-# apt-get autoremove
-# chsh -s $(which zsh)
-# cd
+# this is specific to arch linux and assummes it is in the same directory as
+# the configs i'm shipping
+mkdir ~/.config ~/.config/dunst ~/.config/mutt ~/.config/nvim
+ln dunstrc  ~/.config/dunst/dunstrc
+ln init.vim ~/.config/nvim/init.vim
+ln sxhkdrc  ~/.sxhkdrc
+ln xinitrc  ~/.xinitrc
+ln zshrc    ~/.zshrc
+cp muttrc   ~/.config/mutt/muttrc
 
-# right off the top, let's get some fucking locales
+# let's get some fucking locales before we try to use anything
 sed -e '/en_US.UTF-8/s/#//' -i /etc/locale-gen
 locale-gen
 
 # an Arch-specific install script for the stuff I feel like I need
 pacman -S git
 
-# this may be redundant
-git clone https://github.com/syntactician/dotfiles.git   ~/.dotfiles
+git config --global user.email "edward.hernandez@gmx.com"
+git config --global user.name "Edward Hernandez"
+
+# git clone https://github.com/syntactician/dotfiles.git   ~/.dotfiles
 git clone https://github.com/syntactician/pkgbuild.git   ~/.pkgbuild
 
 git clone https://github.com/syntactician/coursework.git ~/courses
@@ -61,7 +34,10 @@ git clone https://aur.archlinux.org/pacaur-git.git ~/.build/pacaur-git && cd ~/.
 for PKGBUILD in ~/.pkgbuild/*-git; do
 	mkdir ~/.build/$(basename $PKGBUILD)
 	ln $PKGBUILD ~/.build/$(basename $PKGBUILD)/PKGBUILD
-	cd ~/.build/$(basename $PKGBUILD)/ && makepkg -sri
+	(
+		cd ~/.build/$(basename $PKGBUILD)/
+		makepkg -sri
+	)
 done
 
 # enable testing repos
@@ -71,11 +47,11 @@ sed -e '/#[testing]/s/#//'                                                 \
 	-e '/[community-testing/{n;s/.*/Include = /etc/pacman.d/mirrorlist/}'  \
 	-i /etc/pacman.conf
 
-pacman -S xorg-server xorg-xinit virtualbox-guest-utils texlive-most pandoc
-pacaur -S neovim-git dunst-git firefox-nightly
-
-# now some config
-mkdir ~/.config ~/.config/nvim ~/.config/dunst
+pacaur -S \
+	dash libreoffice-fresh pandoc ruby texlive-most ttf-liberation \
+	virtualbox-guest-utils xorg-server xorg-xinit \
+	dunst-git firefox-nightly hsetroot lemonbar-xft-git llpp wmutils-git \
+	neovim-git \
 
 # let's get a functional editor
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
@@ -84,3 +60,5 @@ ln ~/.dotfiles/init.vim ~/.config/nvim/init.vim
 # i'll have to exit this manually. blah.
 nvim -c "PlugInstall"
 
+gem install gist
+gist --login
