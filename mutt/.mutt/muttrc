@@ -8,7 +8,7 @@ account-hook imap://gmail/ "set
  set from = "ehernandez@email.wm.edu"  
  set realname = "Edward Hernandez"  
  set imap_user = "ehernandez@email.wm.edu"  
- set imap_pass = ""  
+ # set imap_pass = ""  
  #My Editor  
  # set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'  
  #Folders  
@@ -22,5 +22,5 @@ account-hook imap://gmail/ "set
  set certificate_file =~/.mutt/certificates  
  #SMTP Setup  
  set smtp_url = "smtp://ehernandez@email.wm.edu@smtp.gmail.com:587/"
- set smtp_pass = ""
+ # set smtp_pass = ""
  set sort=threads
