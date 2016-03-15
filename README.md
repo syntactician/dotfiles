@@ -20,7 +20,7 @@ a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOME` is `.config`.
 	- also [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
 - **Colorscheme**: [Base16]() Oceans
 - **Browser**: [firefox](https://www.mozilla.org/firefox/) with [vimperator](http://www.vimperator.org/)
-- **Window manager**: `[nowm](http://github.com/syntactician/nowm)`, my suite of `sh` scripts over [wmutils](https://wmutils.io/)
+- **Window manager**: [nowm](http://github.com/syntactician/nowm), my suite of `sh` scripts over [wmutils](https://wmutils.io/)
 
 #### Current setup:
 ![nowm on Arch](screen.png)
