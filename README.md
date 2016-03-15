@@ -8,7 +8,7 @@ see here feel free to [hit me up](mailto:ehernandez@email.wm.edu).
 
 - **Operating system**: [Arch Linux](http://archlinux.org)
 - **Text editor**: [neovim](http://neovim.io)
-- **Interactive shell**: [zsh](www.zsh.org)
+- **Interactive shell**: [zsh](http://www.zsh.org)
 - **Scripting shell**: [dash](https://wiki.archlinux.org/index.php/Dash)
 
 #### Current setup:
