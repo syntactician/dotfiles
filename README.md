@@ -12,14 +12,15 @@ a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOME` is `.config`.
 ### Programs
 
 - **Operating system**: [Arch Linux](http://archlinux.org)
-- **Interactive shell**: [zsh](www.zsh.org)
+- **Interactive shell**: [zsh](http://zsh.sourceforge.net/)
 - **Scripting shell**: [dash](https://wiki.archlinux.org/index.php/Dash)
 - **Text editor**: [neovim](http://neovim.io)
-- **Email client**: [mutt]()
+- **Email client**: [mutt](http://www.mutt.org/)
 - **Terminal emulator**: [st](http://st.suckless.org)
-	- also [urxvt]()
+	- also [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
 - **Colorscheme**: [Base16]() Oceans
-- **Browser**: [firefox]() with [vimperator]()
+- **Browser**: [firefox](https://www.mozilla.org/firefox/) with [vimperator](http://www.vimperator.org/)
+- **Window manager**: `[nowm](http://github.com/syntactician/nowm)`, my suite of `sh` scripts over [wmutils](https://wmutils.io/)
 
 #### Current setup:
 ![nowm on Arch](screen.png)
