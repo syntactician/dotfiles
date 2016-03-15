@@ -17,7 +17,7 @@ It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOM
 - **Text editor**: [neovim](http://neovim.io)
 - **Email client**: [mutt](http://www.mutt.org/)
 - **Terminal emulator**: [st](http://st.suckless.org)
-	- also [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
+	- [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) as needed
 - **Colorscheme**: [Base16](https://github.com/chriskempson/base16) Oceans
 - **Browser**: [firefox](https://www.mozilla.org/firefox/) with [vimperator](http://www.vimperator.org/)
 - **Window manager**: [nowm](http://github.com/syntactician/nowm)
@@ -26,7 +26,7 @@ It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOM
 	- **Launcher**: [dmenu](https://dmenu.suckless.org)
 	- **Screenlocker**: [slock](https://tools.suckless.org/slock)
 	- **Wallpaper-er**: [hsetroot](https://slackbuilds.org/repository/13.37/desktop/hsetroot/)
-	- **GTK**: [arc](https://github.com/horst3180/arc-theme), but I hardly see it
+	- **GTK**: [arc](https://github.com/horst3180/arc-theme) as needed
 	- there's also a legacy config for [i3](https://i3wm.org/)
 
 ### TODO
