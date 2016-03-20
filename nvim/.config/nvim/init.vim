@@ -8,15 +8,14 @@ call plug#begin('~/.config/nvim/plugged/')
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
-" Plugin 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-" Plugin 'sjl/gundo.vim'
-" Plugin 'vim-pandoc/vim-pandoc'
-" Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plug 'sjl/gundo.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
-" Plugin 'reedes/vim-pencil'
+" Plug 'reedes/vim-pencil'
 call plug#end()
 "}}}
 
@@ -29,14 +28,7 @@ set noexpandtab
 filetype plugin on
 syntax enable
 
-" augroup pencil
-  " autocmd!
-  " autocmd FileType markdown,mkd call pencil#init()
-  " autocmd FileType text         call pencil#init()
-" augroup END
-
 set showmatch
-" set cursorline
 hi StatusLine ctermbg=white ctermfg=black
 set laststatus=2
 set autoread
@@ -44,9 +36,9 @@ set ruler
 
 set foldlevel=3
 
-set is
-set nu
-set rnu
+set incsearch
+set number
+set relativenumber
 set showcmd
 
 function! NumberToggle()
@@ -67,8 +59,7 @@ map <leader>S :wq<cr>
 map <leader>c :q<cr>
 map <leader>cc I<!-- <Esc>A --><Esc>
 map <leader>e :normal i Edward Hernández<ESC>
-map <leader>g :Goyo<CR>:Limelight!!<CR>:set number! relativenumber! cursorline!<CR>
-map <leader>l :! latexmk -r ~/.latexmkrc %<cr>
+map <leader>g :Goyo<CR>
 map <leader>L :Limelight!!<CR>
 map <leader>m :make 
 map <leader>md :! pandoc % -s -o %<cr>
@@ -85,11 +76,16 @@ map <leader>u :GundoToggle<CR>
 map <leader>v :source $MYVIMRC<cr>
 map <leader>V :sp ~/.vimrc<cr>
 map <leader>ws :%s/\s\+$//<cr>
-
+" syntax highlighting for literate python
+nnoremap <Leader>lp :setlocal ft=python<cr>
+nnoremap <Leader>pl :setlocal ft=tex<cr>
+" EasyAlign
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+" vim-clutch
+noremap  <silent> <F6> i
+inoremap <silent> <F6> <Nop>
 
-let g:livepreview_previewer = 'zathura'
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 
