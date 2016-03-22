@@ -6,7 +6,7 @@ see here feel free to [hit me up](mailto:ehernandez@email.wm.edu).
 
 ### Structure
 
-This repository is now set up for use with [GNU Stow]().  
+This repository is now set up for use with [GNU Stow](https://www.gnu.org/software/stow/).  
 It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOME` is `.config`.
 
 ### Programs
@@ -18,7 +18,7 @@ It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOM
 - **Email client**: [mutt](http://www.mutt.org/)
 - **Terminal emulator**: [st](http://st.suckless.org)
 	- [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) as needed
-- **Colorscheme**: [Base16](https://github.com/chriskempson/base16) Oceans
+- **Colorscheme**: [Base16 Ocean](http://chriskempson.github.io/base16#ocean)
 - **Browser**: [firefox](https://www.mozilla.org/firefox/) with [vimperator](http://www.vimperator.org/)
 - **Window manager**: [nowm](http://github.com/syntactician/nowm)
 	- **Key binder**: [sxhkd](https://github.com/baskerville/sxhkd)
