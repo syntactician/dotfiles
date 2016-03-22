@@ -1,0 +1,45 @@
+# autoload -U promptinit && promptinit
+# prompt off
+
+autoload -U compinit && compinit
+
+PROMPT='] '
+# this right prompt will be overrided
+# by the git prompt sourced below
+# this is a fallback
+RPROMPT="%~"
+
+# include wm in PATH
+PATH=~/.wm/:$PATH
+
+# ls and cd
+alias ls='ls -C --color'
+setopt autocd
+function chpwd() {
+	emulate -L zsh
+	ls -C --color
+}
+
+# sudo
+sudo-command-line() {
+	[[ -z $BUFFER ]] && zle up-history
+	[[ $BUFFER != sudo\ * ]] && LBUFFER="sudo $LBUFFER"
+}
+zle -N sudo-command-line
+	# Defined shortcut keys: [Esc] [Esc]
+bindkey "\e\e" sudo-command-line
+
+# vim-keys
+bindkey -v
+
+# environmentals
+export EDITOR='nvim'
+
+# universal aliases
+alias v='nvim'
+alias vim='nvim'
+alias t='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+
+# source external files
+. ~/.config/zsh/git_prompt.zsh
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
