@@ -10,7 +10,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'plasticboy/vim-markdown'
 Plug 'sjl/gundo.vim'
-Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -48,6 +48,10 @@ endfunc
 function! s:goyo_enter()
 	Limelight
 	set nonumber norelativenumber cursorline!
+endfunc
+
+function PlugFetch()
+	!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endfunc
 
 
