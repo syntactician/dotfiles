@@ -49,5 +49,8 @@ super + s
 super + p
 	spt -n 'notify-send'
 
-super + shift + BackSpace
+super + BackSpace
 	slock
+
+super + shift + BackSpace
+	poweroff
