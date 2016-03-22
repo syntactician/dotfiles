@@ -39,6 +39,9 @@ export EDITOR='nvim'
 alias v='nvim'
 alias vim='nvim'
 alias t='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+alias nfetch='neofetch \
+	--disable theme gtk2 gtk3 icons \
+	--uptime_shorthand tiny'
 
 # source external files
 . ~/.config/zsh/git_prompt.zsh
