@@ -15,6 +15,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/seoul256.vim/'
 " Plug 'reedes/vim-pencil'
 call plug#end()
 "}}}
@@ -24,6 +25,9 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
+let g:seoul256_background = 237
+" colo seoul256
+" set background=dark
 
 filetype plugin on
 syntax enable
@@ -50,6 +54,12 @@ function! s:goyo_enter()
 	set nonumber norelativenumber cursorline!
 endfunc
 
+function Focus()
+	Goyo!!
+	Limelight!!
+	set nu! rnu!
+endfunc
+
 function PlugFetch()
 	!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endfunc
@@ -64,10 +74,11 @@ map <leader>c :q<cr>
 map <leader>cc I<!-- <Esc>A --><Esc>
 map <leader>e :normal i Edward Hernández<ESC>
 map <leader>g :Goyo<CR>
+map <leader>f :call Focus()<CR>
 map <leader>L :Limelight!!<CR>
 map <leader>m :make 
 map <leader>md :! pandoc % -s -o %<cr>
-map <leader>n :set nu! rnu!<cr>
+map <leader>n :call NumberToggle()<cr>
 map <leader>nu :set nu!<cr>
 map <leader>p :! python %:p <cr>
 map <leader>P :! python %:p 
@@ -93,4 +104,4 @@ inoremap <silent> <F6> <Nop>
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 
-" vim:foldmethod=marker:foldlevel=0
+" vim:fdm=marker:fdl=0
