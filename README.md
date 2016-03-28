@@ -18,7 +18,7 @@ It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOM
 - **Email client**: [mutt](http://www.mutt.org/)
 - **Terminal emulator**: [st](http://st.suckless.org)
 	- [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) as needed
-- **Colorscheme**: [Base16 Ocean](http://chriskempson.github.io/base16#ocean)
+- **Colorscheme**: [Seoul256](https://github.com/junegunn/seoul256.vim)
 - **Browser**: [firefox](https://www.mozilla.org/firefox/) with [vimperator](http://www.vimperator.org/)
 - **Window manager**: [nowm](http://github.com/syntactician/nowm)
 	- **Key binder**: [sxhkd](https://github.com/baskerville/sxhkd)
@@ -34,7 +34,8 @@ It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOM
 - [ ] Build a computer and install this setup on bare metal.
 - [ ] Try out [Crux](http://crux.nu).
 - [ ] Try out [bspwm](https://github.com/baskerville/bspwm).
-- [ ] Try out [yabar](https://github.com/geommer/yabar)
+- [ ] Try out [yabar](https://github.com/geommer/yabar).
+- [ ] Try out [emacs](https://www.gnu.org/sofware/emacs/).
 - [ ] Document my setup.
 	- [ ] Flesh out this README.
 	- [ ] Comment in the individual configs.
