@@ -36,6 +36,7 @@ bindkey -v
 export EDITOR='nvim'
 
 # universal aliases
+alias edit="$EDITOR"
 alias v='nvim'
 alias vim='nvim'
 alias t='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
