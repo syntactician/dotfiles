@@ -26,8 +26,7 @@ set shiftwidth=4
 set noexpandtab
 
 let g:seoul256_background = 237
-" colo seoul256
-" set background=dark
+colo seoul256
 
 filetype plugin on
 syntax enable
