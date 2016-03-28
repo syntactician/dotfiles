@@ -2,7 +2,7 @@
 setxkbmap dvorak
 xrdb ~/.Xresources
 
-hsetroot -solid "#2b303b"
+hsetroot -solid "#3a3a3a"
 unclutter --timeout 2 &
 
 mkdir /tmp /tmp/nowm
