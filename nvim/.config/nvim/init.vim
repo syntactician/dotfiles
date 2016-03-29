@@ -16,7 +16,12 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/seoul256.vim/'
+Plug 'sheerun/vim-polyglot'
+Plug 'ervandew/supertab'
+" Plug 'jiangmiao/auto-pairs'
+" Plug 'terryma/vim-multiple-cursors'
 " Plug 'reedes/vim-pencil'
+Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 call plug#end()
 "}}}
 
@@ -102,5 +107,13 @@ inoremap <silent> <F6> <Nop>
 
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
+
+" splits {{{
+map <Leader>j <C-W><C-J>
+map <Leader>k <C-W><C-K>
+
+set splitbelow
+set splitright
+" }}}
 
 " vim:fdm=marker:fdl=0
