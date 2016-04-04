@@ -6,8 +6,10 @@ see here feel free to [hit me up](mailto:ehernandez@email.wm.edu).
 
 ### Structure
 
-This repository is now set up for use with [GNU Stow](https://www.gnu.org/software/stow/).  
-It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOME` is `.config`.
+This repository is now set up for use with [GNU
+Stow](https://www.gnu.org/software/stow/).  
+It assumes that it is a direct subdirectory of `$HOME` and that
+`$XDG_CONFIG_HOME` is `.config`.
 
 ### Programs
 
@@ -16,6 +18,8 @@ It assumes that it is a direct subdirectory of `$HOME` and that `$XDG_CONFIG_HOM
 - **Scripting shell**: [dash](https://wiki.archlinux.org/index.php/Dash)
 - **Text editor**: [neovim](http://neovim.io)
 - **Email client**: [mutt](http://www.mutt.org/)
+	- **Syncing utility**: [OfflineIMAP](http://offlineimap.org/) (via [a wrapper script](mutt/sync.sh))
+	- **Indexer**: [notmuch](http://notmuchmail.org)
 - **Terminal emulator**: [st](http://st.suckless.org)
 	- [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) as needed
 - **Colorscheme**: [Seoul256](https://github.com/junegunn/seoul256.vim)
