@@ -1,16 +1,18 @@
-# autoload -U promptinit && promptinit
 # prompt off
 
 autoload -U compinit && compinit
+setopt completealiases
+setopt HIST_IGNORE_DUPS
 
-PROMPT='] '
+# PROMPT='] '
+PROMPT="λ "
 # this right prompt will be overrided
 # by the git prompt sourced below
 # this is a fallback
 RPROMPT="%~"
 
 # include wm in PATH
-PATH=~/.wm/:$PATH
+PATH=~/.wm/:$PATH:~/.gem/ruby/2.3.0/bin/
 
 # ls and cd
 alias ls='ls -C --color'
@@ -34,15 +36,29 @@ bindkey -v
 
 # environmentals
 export EDITOR='nvim'
+# export EDITOR='emacsclient'
 
 # universal aliases
 alias edit="$EDITOR"
 alias v='nvim'
-alias vim='nvim'
+
+# .config aliases
+alias tmux='tmux -f ~/.config/tmux/tmux.conf'
+
+alias muff='mutt -F $HOME/.mutt/offline.muttrc'
+alias offlineimap='offlineimap -c $HOME/.mutt/offlineimaprc'
+
+# alias vim='nvim'
 alias t='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
 alias nfetch='neofetch \
 	--disable theme gtk2 gtk3 icons \
 	--uptime_shorthand tiny'
+
+# config editing aliases
+alias emacsrc="edit ~/.emacs.d/init.el"
+alias muttrc="edit ~/.mutt/muttrc"
+alias vimrc="edit ~/.config/nvim/init.vim"
+alias zshrc="edit ~/.config/zsh/zshrc"
 
 # source external files
 . ~/.config/zsh/git_prompt.zsh
