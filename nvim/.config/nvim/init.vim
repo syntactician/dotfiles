@@ -18,10 +18,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/seoul256.vim/'
 Plug 'sheerun/vim-polyglot'
 Plug 'ervandew/supertab'
-" Plug 'jiangmiao/auto-pairs'
-" Plug 'terryma/vim-multiple-cursors'
 " Plug 'reedes/vim-pencil'
-Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
+" Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 call plug#end()
 "}}}
 
@@ -68,6 +66,12 @@ function PlugFetch()
 	!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endfunc
 
+" mutt
+autocmd BufNewFile,BufRead /tmp/mutt-* set filetype=mail
+au      Filetype mail setlocal formatoptions+=aw
+
+" literate python
+autocmd BufNewFile,BufRead *.mdw set filetype=tex
 
 let mapleader			= " "
 
@@ -76,7 +80,8 @@ map <leader>M :make <cr> <cr>
 map <leader>S :wq<cr>
 map <leader>c :q<cr>
 map <leader>cc I<!-- <Esc>A --><Esc>
-map <leader>e :normal i Edward Hernández<ESC>
+map <leader>E :normal i Edward Hernández<ESC>
+map <leader>e !sh<CR>
 map <leader>g :Goyo<CR>
 map <leader>f :call Focus()<CR>
 map <leader>L :Limelight!!<CR>
@@ -109,11 +114,26 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 
 " splits {{{
-map <Leader>j <C-W><C-J>
-map <Leader>k <C-W><C-K>
+" map <Leader>j <C-W><C-J>
+" map <Leader>k <C-W><C-K>
+" nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
 
 set splitbelow
 set splitright
+" }}}
+
+" sh goodness {{{
+function ShBuffer()
+	1,$ !sh
+	%y
+	call delete(expand('%'))
+endfunc
+
+map <leader>sh :split /tmp/tmp.sh<cr>
+autocmd BufLeave /tmp/tmp.sh silent call ShBuffer()
 " }}}
 
 " vim:fdm=marker:fdl=0
