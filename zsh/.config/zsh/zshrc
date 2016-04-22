@@ -4,8 +4,8 @@ autoload -U compinit && compinit
 setopt completealiases
 setopt HIST_IGNORE_DUPS
 
-# PROMPT='] '
-PROMPT="λ "
+PROMPT='] '
+# PROMPT='[$(t | wc -l | sed -e "s/ *//")] '
 # this right prompt will be overrided
 # by the git prompt sourced below
 # this is a fallback
@@ -49,7 +49,9 @@ alias muff='mutt -F $HOME/.mutt/offline.muttrc'
 alias offlineimap='offlineimap -c $HOME/.mutt/offlineimaprc'
 
 # alias vim='nvim'
-alias t='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+alias t='python ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+alias b='python ~/.build/t/t.py --task-dir ~/.tasks --list bugs'
+
 alias nfetch='neofetch \
 	--disable theme gtk2 gtk3 icons \
 	--uptime_shorthand tiny'
@@ -62,4 +64,9 @@ alias zshrc="edit ~/.config/zsh/zshrc"
 
 # source external files
 . ~/.config/zsh/git_prompt.zsh
-. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+SYNTAX='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+[[ -r $SYNTAX ]] && source $SYNTAX
+
+Z='/usr/share/z/z.sh'
+[[ -r $Z ]] && source $Z
