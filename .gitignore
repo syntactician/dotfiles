@@ -1,8 +1,12 @@
 *.swp
 .DS_Store
 
-emacs/.emacs.d/auto-save-list/
-emacs/.emacs.d/elpa/
-mutt/.mutt/*
-nvim/.config/nvim/*/
-nvim/.config/nvim/.netrwhist
+emacs/auto-save-list/
+emacs/elpa/
+
+mutt/*
+
+nvim/*/
+nvim/.netrwhist
+
+zsh/.zcompdump

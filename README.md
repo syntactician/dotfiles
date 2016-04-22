@@ -6,10 +6,8 @@ see here feel free to [hit me up](mailto:ehernandez@email.wm.edu).
 
 ### Structure
 
-This repository is now set up for use with [GNU
-Stow](https://www.gnu.org/software/stow/).  
-It assumes that it is a direct subdirectory of `$HOME` and that
-`$XDG_CONFIG_HOME` is `.config`.
+This repository is under revision to force full XDG compliance. It is intended
+to be cloned as `$XDG_CONFIG_DIR/`.
 
 ### Programs
 
@@ -18,7 +16,7 @@ It assumes that it is a direct subdirectory of `$HOME` and that
 - **Scripting shell**: [dash](https://wiki.archlinux.org/index.php/Dash)
 - **Text editor**: [neovim](http://neovim.io)
 - **Email client**: [mutt](http://www.mutt.org/)
-	- **Syncing utility**: [OfflineIMAP](http://offlineimap.org/) (via [a wrapper script](mutt/sync.sh))
+	- **Syncing utility**: [OfflineIMAP](http://offlineimap.org/) (currently phasing out)
 	- **Indexer**: [notmuch](http://notmuchmail.org)
 - **Terminal emulator**: [st](http://st.suckless.org)
 	- [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) as needed
@@ -35,6 +33,8 @@ It assumes that it is a direct subdirectory of `$HOME` and that
 
 ### TODO
 
+- [ ] Full XDG compliance.
+- [ ] Merge `zsh` and `bash` configs.
 - [ ] Build a computer and install this setup on bare metal.
 - [ ] Try out [Crux](http://crux.nu).
 - [ ] Try out [bspwm](https://github.com/baskerville/bspwm).

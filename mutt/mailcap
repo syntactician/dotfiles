@@ -1,0 +1,11 @@
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/*; nvim %s; print=$HOME/.mutt/panprint.sh
+
+application/x-sh; ~/.mutt/mutt-open.sh nvim %s; print=$HOME/.mutt/panprint.sh
+
+# PDF
+# application/pdf; llpp %s
+application/pdf; ~/.mutt/mutt-open.sh xdg-open %s; print=$HOME/.mutt/panprint.sh %s
+application/msword; lowriter; print=$HOME/.mutt/panprint.sh %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; lowriter; print=$HOME/.mutt/panprint.sh %s
+image/*; ~/.mutt/mutt-open.sh xdg-open %s print=$HOME/.mutt/panprint.sh

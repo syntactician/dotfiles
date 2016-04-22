@@ -1,0 +1,20 @@
+[Default Applications]
+application/epub+zip=llpp.desktop;
+application/oxps=llpp.desktop;
+application/pdf=llpp.desktop;
+application/vnd.mozilla.xul+xml=firefox.desktop;
+application/vnd.ms-xpsdocument=llpp.desktop;
+application/x-cbz=llpp.desktop;
+application/x-pdf=llpp.desktop;
+application/xhtml+xml=firefox.desktop;
+image/jpeg=llpp.desktop;
+image/pjpeg=llpp.desktop;
+image/png=llpp.desktop;
+image/tiff=llpp.desktop;
+text/html=firefox.desktop;
+text/mml=firefox.desktop;
+text/xml=firefox.desktop;
+text/*=nvim.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
