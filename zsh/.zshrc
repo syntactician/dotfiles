@@ -42,6 +42,8 @@ export EDITOR='nvim'
 alias edit="$EDITOR"
 alias v='nvim'
 
+alias howlong="$ZDOTDIR/countdown.sh"
+
 # .config aliases
 alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 
@@ -49,7 +51,9 @@ alias muff='mutt -F $HOME/.mutt/offline.muttrc'
 alias offlineimap='offlineimap -c $HOME/.mutt/offlineimaprc'
 
 # alias vim='nvim'
-alias t='python ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+alias  t='python  ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+alias t2='python2 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
+alias t3='python3 ~/.build/t/t.py --task-dir ~/.tasks --list tasks'
 alias b='python ~/.build/t/t.py --task-dir ~/.tasks --list bugs'
 
 alias nfetch='neofetch \
@@ -57,16 +61,19 @@ alias nfetch='neofetch \
 	--uptime_shorthand tiny'
 
 # config editing aliases
-alias emacsrc="edit ~/.emacs.d/init.el"
-alias muttrc="edit ~/.mutt/muttrc"
+alias emacsrc="edit ~/.config/emacs/init.el"
+alias muttrc="edit ~/.config/muttrc"
 alias vimrc="edit ~/.config/nvim/init.vim"
-alias zshrc="edit ~/.config/zsh/zshrc"
+alias zshrc="edit ~/.config/zsh/.zshrc"
 
 # source external files
-. ~/.config/zsh/git_prompt.zsh
+. "$ZDOTDIR/git_prompt.zsh"
+. "$ZDOTDIR/layouts.sh"
 
 SYNTAX='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 [[ -r $SYNTAX ]] && source $SYNTAX
 
 Z='/usr/share/z/z.sh'
 [[ -r $Z ]] && source $Z
+
+. "$ZDOTDIR/countdown.sh"
