@@ -29,4 +29,8 @@ alias muttrc="edit ~/.config/muttrc"
 alias vimrc="edit ~/.config/nvim/init.vim"
 alias zshrc="edit ~/.config/zsh/.zshrc"
 
-alias howlong="$ZDOTDIR/countdown.sh"
+alias reload=". $ZDOTDIR/.zshrc"
+
+# my scripts
+alias howlong="$ZDOTDIR/scripts/countdown.sh"
+alias topdf="$ZDOTDIR/scripts/topdf.sh"
