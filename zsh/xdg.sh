@@ -1,11 +1,11 @@
 # thanks to woegjiub
 
 # XDG dirs first
-    export XDG_CONFIG_HOME=$HOME/.config
-    export XDG_DATA_HOME=$HOME/.local/share
-    export XDG_BIN_HOME=$HOME/.local/bin
-    export XDG_LIB_HOME=$HOME/.local/lib
-    export XDG_CACHE_HOME=$HOME/.cache
+	export XDG_BIN_HOME=$HOME/.local/bin
+	export XDG_CACHE_HOME=$HOME/.cache
+	export XDG_CONFIG_HOME=$HOME/.config
+	export XDG_DATA_HOME=$HOME/.local/share
+	export XDG_LIB_HOME=$HOME/.local/lib
 
 # Environment-variable respecting programs
 	export ADB_VENDOR_KEYS="$XDG_DATA_HOME/android/.android"
@@ -13,8 +13,8 @@
 	export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 	export COMPOSER_HOME="$XDG_DATA_HOME/composer"
 	export COMPOSER_CACHE_DIR="$XDG_CACHE_HOME/composer"
-	export GEM_HOME="$HOME/.local/lib/gems"
-	export GEM_PATH="$HOME/.local/bin"
+	export GEM_HOME="$XDG_LIB_HOME/gems"
+	export GEM_PATH="$XDG_BIN_HOME/bin"
 	export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 	export GIT_SSH_COMMAND="ssh -F $XDG_CONFIG_HOME/ssh/config "$@" 2>/dev/null"
 	export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
@@ -39,6 +39,7 @@
 	export PYLINTHOME="$XDG_DATA_HOME/pylint"
 	export PYLINTRC="$XDG_CONFIG_HOME/pylint/pylintrc"
 	export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
+	export R_LIBS_USER="$XDG_LIB_HOME/R"
 	export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd.sock"
 	export TERMINFO="$XDG_CONFIG_HOME/terminfo"
 	export VAGRANT_DOTFILE_PATH="$XDG_DATA_HOME/vagrant"
