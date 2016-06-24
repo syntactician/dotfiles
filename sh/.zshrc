@@ -31,8 +31,8 @@ bindkey "\e\e" sudo-command-line
 bindkey -v
 
 # environmentals
-export EDITOR='nvim'
-# export EDITOR='emacsclient'
+# export EDITOR='nvim'
+export EDITOR='emacsclient'
 
 # source my files
 . "$ZDOTDIR/git_prompt.zsh"

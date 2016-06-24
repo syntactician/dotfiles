@@ -48,11 +48,12 @@
 	export VIMPERATOR_INIT=":source $XDG_CONFIG_HOME/vimperator/vimperatorrc"
 	export VIMPERATOR_RUNTIME="$XDG_CONFIG_HOME/vimperator"
 	export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
-	export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+	# export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+	export ZDOTDIR="$XDG_CONFIG_HOME/sh"
 
 # Alias respecting programs
 	alias ag="ag -p $XDG_CONFIG_HOME/ag/agignore"
-	alias emacs="emacs -q --load $XDG_CONFIG_HOME/emacs/emacsrc"
+	# alias emacs="emacs -q --load $XDG_CONFIG_HOME/emacs/init.el"
 	# alias firefox="firefox -profile $XDG_CONFIG_HOME/firefox"
 	export BROWSER="firefox -profile $XDG_CONFIG_HOME/firefox"
 	alias mutt="mutt -F $XDG_CONFIG_HOME/mutt/muttrc"

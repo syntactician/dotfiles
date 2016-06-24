@@ -1,4 +1,5 @@
 #!/bin/sh
+
 setxkbmap dvorak
 xrdb ~/.Xresources
 
@@ -6,6 +7,8 @@ hsetroot -solid "#3a3a3a"
 unclutter --timeout 2 &
 
 mkdir /tmp /tmp/nowm
+
+emacs --daemon
 
 dunst &
 ~/.wm/bar.sh | lemonbar -pd -f 'Liberation Mono' &
