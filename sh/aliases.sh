@@ -3,12 +3,10 @@ alias ls='ls -C --color'
 
 # editing
 alias edit="$EDITOR"
-
-alias e="emacs"
-alias ec="emacsclient"
+alias e="$EDITOR"
 
 alias vim='nvim'
-alias v='vim'
+
 
 # .config aliases
 alias tmux='tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf'
@@ -45,3 +43,7 @@ fi
 # my scripts
 alias howlong="$ZDOTDIR/scripts/countdown"
 alias topdf="$ZDOTDIR/scripts/topdf.sh"
+
+# misc
+alias s="sudo"
+alias spm="sudo pacman"
