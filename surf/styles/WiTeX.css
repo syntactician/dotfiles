@@ -1,0 +1,239 @@
+/*********************************************************************
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+For more information, please refer to <http://unlicense.org/>
+*********************************************************************/
+
+/*
+WiTeX
+https://github.com/AndrewBelt/WiTeX
+*/
+
+
+/* Latin Modern (LaTeX default) font */
+
+@font-face {
+	font-family: 'Latin Modern Roman' !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-regular.woff') format('woff') !important;
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman' !important;
+	font-weight: bold !important;
+	font-style: normal !important;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bold.woff') format('woff') !important;
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman' !important;
+	font-weight: normal !important;
+	font-style: italic !important;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-italic.woff') format('woff') !important;
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman' !important;
+	font-weight: bold !important;
+	font-style: italic !important;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bolditalic.woff') format('woff') !important;
+}
+
+@font-face {
+	font-family: 'Latin Modern Mono' !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmmono10-regular.woff') format('woff') !important;
+}
+
+@font-face {
+	font-family: 'Latin Modern Mono' !important;
+	font-weight: normal !important;
+	font-style: italic !important;
+	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmmono10-italic.woff') format('woff') !important;
+}
+
+/* Page Layout */
+
+body {
+	background: none !important;
+	font-size: 14pt !important;
+	font-family: 'Latin Modern Roman', serif !important;
+	color: black !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	border: none !important;
+	font-weight: bold !important;
+}
+
+a, a:visited {
+	color: #a00 !important;
+}
+
+a.new, a.new:visited {
+	color: black !important;
+}
+
+/* does not work well with surf */
+
+/*
+ *  ul {
+ *  	list-style: disc !important;
+ *  }
+ */
+
+#mw-navigation, #mw-page-base, #mw-head-base, #footer {
+	/* nuke everything but the content */
+	display: none !important;
+}
+
+/* Content Box */
+
+.mw-body {
+	max-width: 720px !important;
+	margin: 1em auto !important;
+}
+
+#content, div#content {
+	border: none !important;
+	color: black !important;
+}
+
+#firstHeading, #siteSub {
+	text-align: center !important;
+	display: block !important;
+}
+
+#siteSub {
+	margin-top: -0.5em !important;
+	margin-bottom: 4em !important;
+}
+
+/* Article Body */
+
+.mw-body-content {
+	font-size: inherit !important;
+	text-align: justify !important;
+	-moz-hyphens: auto !important;
+	-webkit-hyphens: auto !important;
+	hyphens: auto !important;
+	line-height: 1.5em !important;
+}
+
+.mw-body {
+	padding: 2em 0 !important;
+}
+
+.mw-body h1, .mw-body h2, .mw-body h3, .mw-body h4, .mw-body h5, .mw-body h6, div#content h1, div#content h2, div#content #firstHeading {
+	font-family: inherit !important;
+	line-height: 1.5em !important;
+	margin-bottom: 0.5em !important;
+}
+
+.mw-body h1, div#content h1 {
+	font-size: 2em !important;
+}
+
+.mw-body h2, div#content h2 {
+	font-size: 1.5em !important;
+}
+
+.mw-body h3 {
+	font-size: 1.2em !important;
+}
+
+.mw-body h4 {
+	font-size: 1.1em !important;
+}
+
+.mw-body h5, .mw-body h6 {
+	font-size: 1.0em !important;
+}
+
+.mw-body p {
+	margin: 0 !important;
+}
+
+.mw-body p + p {
+	text-indent: 2em !important;
+}
+
+.mw-editsection {
+	/* hide more non-content */
+	display: none !important;
+}
+
+table.ambox {
+	margin-bottom: 1em !important;
+}
+
+dl dd {
+	/* center definitions (most useful for display equations) */
+	text-align: center !important;
+}
+
+span.texhtml {
+	/* revert inline math to default font */
+	font-family: inherit !important;
+	font-size: inherit !important;
+	line-height: inherit !important;
+}
+
+/* Table of Contents */
+
+#toc, .toc {
+	border: none !important;
+	padding: 0 !important;
+	background: none !important;
+	font-size: inherit !important;
+	/* span 100% of the width */
+	display: block !important;
+}
+
+.mw-body #toc h2, .mw-body .toc h2 {
+	font-family: inherit !important;
+	font-size: 1.5em !important;
+}
+
+#toc h2, .toc h2 {
+	display: block !important;
+}
+
+#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
+	text-align: left !important;
+}
+
+.toctoggle {
+	display: none !important;
+}
+
+/* Figures */
+
+div.tright {
+	margin: 0.5em 0 0.5em 1.5em !important;
+}
+
+div.tleft {
+	margin: 0.5em 1.5em 0.5em 0 !important;
+}
+
+/* Code */
+
+.mw-code {
+	margin: 1em 0 !important;
+}
+
+pre, code {
+	font-family: "Latin Modern Mono", monospace !important !important;
+}
+
+sup {
+	text-indent: 0 !important;
+}
