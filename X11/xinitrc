@@ -3,14 +3,9 @@
 setxkbmap dvorak
 xrdb ~/.Xresources
 
-hsetroot -solid "#3a3a3a"
-unclutter --timeout 2 &
-
-mkdir /tmp /tmp/nowm
-
-emacs --daemon
+xsetroot -solid "#3a3a3a"
+unclutter -grab -idle 2 -root &
 
 dunst &
-~/.wm/bar.sh | lemonbar -pd -f 'Liberation Mono' &
-wew | ~/.wm/watch.sh &
-exec sxhkd
+dwmstatus &
+exec dwm
